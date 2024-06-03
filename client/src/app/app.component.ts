@@ -8,7 +8,6 @@ import { User } from './_models/user';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-
   title = 'Dating App';
   users: any;
 
@@ -19,8 +18,6 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.setCurrentUser();
   }
-
-
 
   setCurrentUser() {
     const userString = localStorage.getItem('user');

@@ -1,3 +1,5 @@
+using AutoMapper.Execution;
+
 namespace API.DTOs
 {
     public class MemberUpdateDto
