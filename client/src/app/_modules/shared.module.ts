@@ -5,6 +5,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
+import { FileUploadModule } from 'ng2-file-upload';
 
 @NgModule({
   declarations: [],
@@ -18,6 +19,7 @@ import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
     NgxSpinnerModule.forRoot({
       type: 'line-scale-party'
     }),
+    FileUploadModule,
     BsDatepickerModule.forRoot()
   ],
   exports: [
@@ -25,6 +27,7 @@ import { BsDatepickerModule} from 'ngx-bootstrap/datepicker';
     ToastrModule,
     TabsModule,
     NgxSpinnerModule,
+    FileUploadModule,
     BsDatepickerModule
   ]
 })
