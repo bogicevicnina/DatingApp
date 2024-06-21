@@ -14,7 +14,7 @@ import { AccountService } from '../../_services/account.service';
 })
 export class MemberListComponent implements OnInit {
 
- // members$: Observable<Member[]> | undefined;
+  //members$: Observable<Member[]> | undefined;
   members: Member[] = [];
   pagination: Pagination | undefined;
   userParams: UserParams | undefined;
