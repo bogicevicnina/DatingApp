@@ -11,7 +11,7 @@ import { MessageService } from '../_services/message.service';
 export class MessagesComponent implements OnInit {
 
   messages?: Message[];
-  pagination?: Pagination;
+  pagination: Pagination | undefined;
   container = 'Unread';
   pageNumber = 1;
   pageSize = 5;
@@ -29,6 +29,12 @@ export class MessagesComponent implements OnInit {
         this.pagination = response.pagination;
       }
 
+    })
+  }
+
+  deleteMessage(id: number){
+    this.messageService.deleteMessage(id).subscribe({
+      next: () => this.messages?.splice(this.messages.findIndex(m => m.id === id), 1)
     })
   }
 
